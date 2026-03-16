@@ -1,0 +1,19 @@
+{
+  "name": "trigon-cyber-terminal",
+  "version": "1.0.0",
+  "description": "Trigon Cyber Defense Terminal Platform on ICP",
+  "scripts": {
+    "build": "npm run build:ts && npm run copy-assets",
+    "build:ts": "tsc",
+    "copy-assets": "mkdir -p src/frontend/dist && cp src/frontend/index.html src/frontend/terminal.css src/frontend/dist/",
+    "dev": "npx serve src/frontend/dist -l 3000"
+  },
+  "dependencies": {
+    "@dfinity/agent": "^2.0.0",
+    "@dfinity/candid": "^0.21.0",
+    "@dfinity/principal": "^0.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}

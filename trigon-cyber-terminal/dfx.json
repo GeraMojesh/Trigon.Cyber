@@ -1,0 +1,22 @@
+{
+  "canisters": {
+    "trigon_frontend": {
+      "type": "assets",
+      "source": ["src/frontend/dist"],
+      "dependencies": ["trigon_backend"],
+      "build": ["npm install", "npm run build"]
+    },
+    "trigon_backend": {
+      "type": "motoko",
+      "main": "src/backend/main.mo"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
